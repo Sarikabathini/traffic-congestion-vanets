@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VANET & Maritime ITS System</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h3>Traffic Congestion and Accident Prevention Analysis for Connectivity in Vehicular Ad-hoc Networks (VANETs)</h3>
+        <div class="header-info">
+            <span id="current-time"></span> | 
+            <span id="vehicle-count">Vehicles: 0</span> | 
+            <span id="vessel-count">Vessels: 0</span> |
+            <span id="event-count">Events: 0</span>
+        </div>
+    </header>
+
+    <main>
+        <div id="map"></div>
+        <div class="sidebar">
+            <div class="section">
+                <h2>Live Events</h2>
+                <ul id="event-list">
+                    </ul>
+            </div>
+            <div class="section">
+                <h2>Event Summary</h2>
+                <canvas id="eventChart"></canvas>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 VANET & Maritime ITS. All rights reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const UPDATE_INTERVAL_MS = {{ update_interval }};
+    </script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

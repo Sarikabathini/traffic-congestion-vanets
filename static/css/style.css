@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+.header-info {
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+main {
+    display: flex;
+    flex-grow: 1;
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    overflow: hidden; /* For map border-radius */
+}
+
+#map {
+    flex: 3; /* Takes 3 parts of the available space */
+    height: 80vh; /* Adjust as needed */
+    border-radius: 8px;
+    overflow: hidden; /* To ensure map content respects border-radius */
+}
+
+.sidebar {
+    flex: 1; /* Takes 1 part of the available space */
+    padding: 20px;
+    border-left: 1px solid #eee;
+    overflow-y: auto; /* Scroll for event list */
+}
+
+.section {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.section h2 {
+    margin-top: 0;
+    color: #555;
+    font-size: 1.3em;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+#event-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#event-list li {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+#event-list li strong {
+    color: #007bff;
+}
+
+#event-list li.type-congestion { background-color: #ffe0b2; } /* Orange */
+#event-list li.type-accident_risk { background-color: #ffcdd2; } /* Red */
+#event-list li.type-damaged_road { background-color: #e0f2f7; } /* Light Blue */
+#event-list li.type-rough_weather { background-color: #cfd8dc; } /* Grey-blue */
+#event-list li.type-distress_call { background-color: #ffeb3b; } /* Yellow */
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.8em;
+    margin-top: auto; /* Pushes footer to the bottom */
+}
